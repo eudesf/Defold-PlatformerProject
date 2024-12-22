@@ -1,0 +1,38 @@
+local MOVE_SPEED = 100
+local GRAVITY = -500
+local MAX_FALL_SPEED = 500
+local JUMP_SPEED = 300
+local NORMAL_THRESHOLD = 0.8
+
+local MOVE_LEFT_INPUT = hash("move_left")
+local MOVE_RIGHT_INPUT = hash("move_right")
+local JUMP_INPUT = hash("jump")
+
+local IDLE_ANIM = hash("player_idle")
+local MOVE_ANIM = hash("player_move")
+local JUMP_ANIM = hash("player_jump")
+
+local CONTACT_POINT_RESPONSE = hash("contact_point_response")
+local GROUND_LAYER = hash("ground")
+
+function init(self)
+	self.spawn_position = go.get_position();
+	self.velocity = vmath.vector3();
+	self.facing_direction = 1
+	self.correction = vmath.vector3()
+	self.ground_contact = true
+	self.anim = nil
+	self.score = 0;
+end
+
+function fixed_update(self, dt)
+	
+end
+
+function on_message(self, message_id, message, sender)
+	
+end
+
+function on_input(self, action_id, action)
+	
+end
